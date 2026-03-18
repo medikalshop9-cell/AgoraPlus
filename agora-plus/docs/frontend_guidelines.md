@@ -11,6 +11,18 @@ Built with Flutter.
 - Persistent bottom navigation (6 tabs max)
 - Tabs: Home, Events, Community, Voting, Members, Profile
 
+## Secondary Navigation
+Inside sections, navigation may appear as:
+
+Examples:
+
+Events
+ ├ Upcoming
+ └ Past
+Voting
+ ├ Active Elections
+ └ Past Elections
+
 ## Layout Grid
 - Outer margin: 16px
 - Section spacing: 24px
@@ -61,3 +73,70 @@ Built with Flutter.
 - Lazy load images
 - Cache frequently used data
 - Minimize animations and network calls
+
+
+## Loading States
+- Spinner or skeleton placeholders; no blank screens
+
+## Error States
+- Clear, actionable messages (Network error / Try again / Event full)
+
+## Accessibility
+- High color contrast
+- Touch targets minimum 44px
+- Readable fonts, clear icons
+
+## Performance
+Frontend must be optimized for speed.
+- Lazy load images
+- Cache frequently used data
+- Minimize animations and network calls
+Mobile performance is critical.
+
+## Animation Guidelines
+Animations should remain subtle and purposeful.
+
+Examples:
+Screen transitions
+Button feedback
+Notification appearance
+Avoid excessive animations that slow the app
+
+Feature
+Flutter Property / Widget
+Page Swipe
+CupertinoPageRoute
+List Bounce
+BouncingScrollPhysics()
+Loading
+CupertinoActivityIndicator()
+Natural Feel
+Curves.easeInOutQuart
+Glass Effect
+BackdropFilter
+Skeleton Loading
+Skeletonizer
+Hero Transition
+Hero
+Touch Feedback
+InkWell / GestureDetector
+Haptic Feedback
+HapticFeedback.lightImpact()
+Smooth Container Animation
+AnimatedContainer
+Fade Page Transition
+FadeTransition
+
+# Slightly expanded
+Feature                     Flutter Property / Widget
+Page Swipe                  CupertinoPageRoute
+List Bounce                 BouncingScrollPhysics()
+Loading                     CupertinoActivityIndicator()
+Natural Feel                Curves.easeInOutQuart
+Glass Effect                BackdropFilter
+Skeleton Loading            Skeletonizer
+Hero Transition             Hero
+Touch Feedback              InkWell
+Haptic Feedback             HapticFeedback.lightImpact()
+Smooth Animation            AnimatedContainer
+Page Fade Transition        FadeTransition

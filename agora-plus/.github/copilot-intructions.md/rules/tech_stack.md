@@ -1,5 +1,5 @@
 # Tech Stack — AGORA+
-
+Always refer to [tech_stack.md](./docs/tech_stack.md) for the allowed versions of FastAPI, Flutter, PostgreSQL, Firebase, Stream Chat, Render, GitHub, Visual Studio Code.
 ## Architecture
 Mobile App (Flutter) → API Server (FastAPI) → PostgreSQL
 

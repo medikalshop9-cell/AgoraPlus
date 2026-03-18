@@ -1,4 +1,7 @@
 # Implementation Plan — AGORA+
+## Current progress
+Follow the roadmap in [implementation_plan.md](./docs/implementation_plan.md).Before starting any task, check the current progress and update it after completing the task.
+
 
 ## Phase 1 — Planning & Design (1–2 weeks)
 - Finalize PRD, App Flow, Tech Stack, Frontend Guidelines, Backend Schema

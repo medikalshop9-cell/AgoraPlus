@@ -18,7 +18,7 @@ Schema and architecture support multiple clubs from day one.
 | Mobile | Flutter (iOS + Android) |
 | Backend | FastAPI (Python) |
 | Database | PostgreSQL |
-| Auth | Microsoft Azure AD |
+| Auth | Firebase Authentication |
 | Notifications | Firebase Cloud Messaging |
 | Storage | Firebase Storage |
 | Chat | Stream Chat |

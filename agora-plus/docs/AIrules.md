@@ -53,3 +53,79 @@
 ## 8. Do / Don't
 **Do:** Stick to phase order, summarise progress, ask plain-English questions, provide modular reusable code.
 **Don't:** Mix phases, assume user preferences, skip RBAC or security checks, deliver code without context.
+
+## Development Workflow (Strict Order)
+## Phase 0: Freeze the docs
+Before coding, finish and lock:
+• PRD
+• App Flow
+• Tech Stack
+• Frontend Guidelines
+• Backend Schema
+• Implementation Plan
+• AIrules.md
+
+## Phase 1: Setup
+Create:
+• repo structure
+• Flutter app starter
+• FastAPI backend starter
+• environment files
+• basic configs
+
+## Phase 2: Authentication
+Build:
+• Microsoft login
+• UM6P email restriction
+• role setup
+• member profile creation
+
+## Phase 3: Core data
+Build:
+• clubs
+• users
+• announcements
+• events
+• RSVPs
+
+## Phase 4: Frontend screens
+Build:
+• Home
+• Events
+• Community
+• Voting
+• Members
+• Profile
+
+## Phase 5: Chat
+Build:
+• main chat
+• event discussion chat
+• moderation tools
+
+## Phase 6: Voting
+Build:
+• election creation
+• anonymous voting
+• results
+
+## Phase 7: Notifications
+Build:
+• push notifications
+• event reminders
+• vote alerts
+
+## Phase 8: Testing
+Test:
+• auth
+• permissions
+• IDOR
+• rate limiting
+• flows
+• edge cases
+
+## Phase 9: Deploy
+Then:
+• backend on Render
+• mobile build
+• store deployment later
