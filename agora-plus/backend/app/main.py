@@ -1,25 +1,23 @@
-# AGORA+ — FastAPI entry point
-# Phase: Backend Setup (Phase 2)
-# Registers all routers and initialises the app
+import logging
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
+from app.routers import auth, events, announcements, rsvps
 
-from fastapi import FastAPI
-from app.routers import auth, clubs, users, announcements, events, rsvps, voting, chat, members, notifications, photos
+logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
+logger = logging.getLogger("agora.api")
 
 app = FastAPI(title="AGORA+ API", version="0.1.0")
 
-# Register routers
-app.include_router(auth.router,          prefix="/auth",          tags=["Auth"])
-app.include_router(clubs.router,         prefix="/clubs",         tags=["Clubs"])
-app.include_router(users.router,         prefix="/users",         tags=["Users"])
-app.include_router(announcements.router, prefix="/announcements", tags=["Announcements"])
-app.include_router(events.router,        prefix="/events",        tags=["Events"])
-app.include_router(rsvps.router,         prefix="/rsvps",         tags=["RSVPs"])
-app.include_router(voting.router,        prefix="/voting",        tags=["Voting"])
-app.include_router(chat.router,          prefix="/chat",          tags=["Chat"])
-app.include_router(members.router,       prefix="/members",       tags=["Members"])
-app.include_router(notifications.router, prefix="/notifications", tags=["Notifications"])
-app.include_router(photos.router,        prefix="/photos",        tags=["Photos"])
+app.include_router(auth.router, prefix="/v1")
+app.include_router(events.router, prefix="/v1")
+app.include_router(announcements.router, prefix="/v1")
+app.include_router(rsvps.router, prefix="/v1")
 
 @app.get("/")
 async def root():
-    return {"status": "AGORA+ API running"}
+    return {"service": "agora-plus-backend", "status": "ok"}
+
+@app.get("/health")
+async def health():
+    return {"status": "healthy"}

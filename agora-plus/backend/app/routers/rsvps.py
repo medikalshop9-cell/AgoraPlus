@@ -1,10 +1,8 @@
-# Router: rsvps
-# Phase: Backend Setup (Phase 2)
-# POST rsvp, DELETE cancel rsvp, GET attendees
-
 from fastapi import APIRouter, Depends
-from app.middleware.rbac import require_admin, require_member
+from app.middleware.rbac import require_member
 
-router = APIRouter()
+router = APIRouter(tags=["RSVPs"])
 
-# TODO: Add route handlers per docs/app_flow.md and docs/backend_schema.md
+@router.post("/rsvp")
+async def create_rsvp(current_user: dict = Depends(require_member)):
+    return {"status": "ok", "data": {}, "error": None}

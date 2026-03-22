@@ -1,14 +1,19 @@
-# Auth Service
-# Phase: Backend Setup (Phase 2)
-# Verifies Microsoft Azure AD tokens and enforces @um6p.ma domain restriction
-
+import firebase_admin
+from firebase_admin import credentials, auth
 from app.config import settings
 
-async def verify_microsoft_token(token: str) -> dict:
-    # TODO: Call Azure AD token validation endpoint
-    # Verify token signature, expiry, and email domain
-    # Returns decoded user info or raises 401
-    raise NotImplementedError
+if not firebase_admin._apps:
+    cred = credentials.Certificate(settings.firebase_credentials_path)
+    firebase_admin.initialize_app(cred)
 
-async def is_allowed_domain(email: str) -> bool:
-    return email.endswith(settings.allowed_email_domain)
+async def verify_firebase_token(token: str) -> dict:
+    decoded = auth.verify_id_token(token)
+    email = decoded.get("email", "")
+    if not email.endswith(settings.allowed_email_domain):
+        raise ValueError("Domain not allowed")
+    return {
+        "uid": decoded["uid"],
+        "email": email,
+        "name": decoded.get("name", ""),
+        "role": decoded.get("role", "member"),
+    }

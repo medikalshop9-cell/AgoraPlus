@@ -4,48 +4,4 @@ backend/__pycache__/
 backend/**/__pycache__/
 backend/*.pyc
 backend/firebase-credentials.json
-
-# Flutter
-frontend/agora_app/.dart_tool/
-frontend/agora_app/build/
-frontend/agora_app/.flutter-plugins
-frontend/agora_app/.flutter-plugins-dependencies
-frontend/agora_app/android/.gradle/
-frontend/agora_app/ios/Pods/
-frontend/agora_app/ios/.symlinks/
-
-# General
-.DS_Store
-*.log
-node_modules/
-
-# Copy this file to .env and fill in your values
-# Never commit .env to version control
-STREAM_API_KEY= vz4285mhw6km
-STREAM_API_SECRET=your_api bes4p8shw4fp4w38dgjtq64m6gfpnvbmfjrnpc7jxutwab488cb9ca8e3zhgaewg   # only for server-side use
-STREAM_APP_ID= 1553389           # optional if your dashboard shows it
-
-# PostgreSQL
-PGHOST=localhost
-PGPORT=5432
-PGUSER=postgres
-PGPASSWORD=Westwood@1
-PGDATABASE=Agoraplus
-DATABASE_URL=postgresql+asyncpg://user:Westwood@1@localhost:5432/Agoraplus
-DATABASE_URL=postgresql://postgres:Westwood@1@localhost:5432/Agoraplus
-Repo_Token= dWvX3l4MaNCpH3Tsilrz0eogxG7H9cvM
-
-
-FIREBASE_CREDENTIALS_PATH={
-  "type": "service_account",
-  "project_id": "agora-plus-7e5de",
-  "private_key_id": "6918ed3d974959a47ac8421863753712cfa699d2",
-  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPdgmPteshpge5\nOj7VbQcuoBFXk/Qrao0Ig+wxyVX+uDYrdvf/5VenDZn4a+P19+HNlGVFmG0EdDkU\ncMkgn7y0BcJq/alwtC7EqzoNJyoGzKGwvHykHPN6YaOJVcDOGve6mn+8POrIZ2Lf\nuNBdH8HHUaLit/5tKHco8XuX9xl09Kcm2AhKa48TA0YvZKl6ddJ0wFFi7artvkAk\nH8OfS305gb0dwX/c07IO+kmxVGriuwSluBCidq4vueLODVeLygAdC/3Pe5QRG5f6\nIfb2WLgqTxFR0YKZ/nHjiCHl/jOLVN8sKTutecBSOBEmciJfPMrHYvgR8LGn95uG\n+swACtK3AgMBAAECggEAL2HOHTx3T2AUM4HSB/y2vzdfvpjUE3Zqb59xuo05TsvT\n02mAirleo5C/sbUyg2Lx93oFBzgg7ft9beW0ifbxqkwGc1kr8cm1RMW2pHplZtgl\nta/W58SU90aFi0BCoNAX9E6FDgD7vnmeY2pabGpsX5GNmipbuaKcVIWSrMqKzeMJ\nDeep2VTOEC3HsAdMZuF6iLKjT1Bm8deYLxfIKdMGJ0rs1DKtgg9j+yOHBYd6p6oA\nUP38+ZyPSvXox8HdkR0RosMZkHGvfBtDCgOPkBVXz/RK5fFOTcvOWxbVWdbvZ3Qw\nKR4n0OlikqZYP11kVgq3Ou1F9iH6UK0OA3iD3b/OAQKBgQD5wulTzhpBnjpereLM\nFOyObFysegLgluO4dR5P3HQIqAlapVHh0U+BVwPLUgO349Eax4eR1Gzw5nX0gK+E\nNIII6C5nkAeM3d8dnF1TWBMPwzQBgQHSnZPgWm3XXLJr7SMZwzB7x2mrsnZaMHvt\njpmRBNhAnBrgloAtpnsxQpiLYQKBgQDUpKN0kjuOxf5EuKpKESa6NmkvevumUNu6\nDsiutI6qKgMOEHUPqmxqjWsrKh2pBazjy+JEHRjGUyokzG6QYeiNK3r/rfPS+H3C\nG/qoe0w6KvgfYCHYxniXKg6nStSVbj6Aog59JNhVRfvQ3CRj0vrXJjXeq77ShyWh\nUHJX/75tFwKBgFHuwdIvK2fZOzax/lOKjauPGrut7uG0PhHVwdLa8+mfDiqBTyIw\nIs/ANsttJTEe+Aq759pMAEzqnUlPKcTJ4NqBKC/rDL8GTdoN4IOlweMK2zWfF3T7\nInaX066xhwpmqXwbDv2cBitACRk/DHh6rh/nofVYAG0qkfPnyEP5n8chAoGBAMYP\nz9v9dRIII0z5QEwa65qYoaLDB3CjcfY8XPo1XYjr9sp7071SvQcGUCL1aIkNqzrG\npitReskHn4KFFBrRx1zuefN6oFgKcoCBtRiHN7oaWeBHl18lhh8u4lU6YwYImJkR\n2TMBRasvs1yYICEG2/PYOGb+S5Amp4s4tjh3EnTjAoGALdj+uJmU1mLp8vhGEHe5\nnl5seEltG4sn1/uPzKRpp+8KkQIZJ6u6Fb9lph5g0NijLJqlKMPFhpacsUjBhmad\nTRckNuwaveil7mLptfZDCgnSQcWUR+aZdf07F83ymH+IPVEAK985uf+Mz5VIhkgd\nBJJQ6tYqosWxFGHhZEqTzxA=\n-----END PRIVATE KEY-----\n",
-  "client_email": "firebase-adminsdk-fbsvc@agora-plus-7e5de.iam.gserviceaccount.com",
-  "client_id": "105693826238817527529",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40agora-plus-7e5de.iam.gserviceaccount.com%22,
-  "universe_domain": "googleapis.com"
-}
+backend/firebase_credentials.json

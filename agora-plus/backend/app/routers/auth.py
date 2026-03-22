@@ -1,10 +1,8 @@
-# Router: auth
-# Phase: Backend Setup (Phase 2)
-# POST /login — verify Azure AD token and domain
-
 from fastapi import APIRouter, Depends
-from app.middleware.rbac import require_admin, require_member
+from app.middleware.auth import verify_token
 
-router = APIRouter()
+router = APIRouter(tags=["Auth"])
 
-# TODO: Add route handlers per docs/app_flow.md and docs/backend_schema.md
+@router.get("/me")
+async def get_me(current_user: dict = Depends(verify_token)):
+    return {"status": "ok", "data": current_user, "error": None}
